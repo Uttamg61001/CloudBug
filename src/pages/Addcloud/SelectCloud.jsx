@@ -61,7 +61,7 @@ const SelectCloud = () => {
                   <img
                     src={item.image}
                     alt= {`${item.image} logo`}
-                    className="object-contain h-20  cursor-pointer "
+                    className="object-contain h-20 w-28 cursor-pointer "
                   />
                 </div>
               ))}
