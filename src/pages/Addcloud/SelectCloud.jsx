@@ -48,7 +48,7 @@ const SelectCloud = () => {
         </div>
         {/* <SelectCloudHeader /> */}
         <main className=" flex items-center justify-evenly h-[100vh] ">
-          <div className="flex flex-col sm:gap-6  items-center mt-12 sm:mt-0 h-screen justify-center  z-20">
+          <div className="flex flex-col sm:gap-10  items-center mt-12 sm:mt-0 h-screen justify-center  z-20">
             <h1 className="text-2xl font-medium sm:text-3xl  text-zinc-900 ">
               Select Your Cloud
             </h1>
@@ -56,13 +56,13 @@ const SelectCloud = () => {
               {cloud.map((item, index) => (
                 <div
                   key={item.name}
-                  className="flex items-center p-4 justify-center  bg-[#EEF7FE]  rounded-[20px] shadow-md  transition ease-in-out duration-300  hover:scale-105 "
+                  className="flex items-center p-4  justify-center  bg-[#EEF7FE]  rounded-[20px] shadow-md  transition ease-in-out duration-300  hover:scale-105 "
                   onClick={() => handleClick(item)}
                 >
                   <img
                     src={item.image}
                     alt= {`${item.image} logo`}
-                    className="object-contain h-20 w-30 cursor-pointer "
+                    className="object-contain h-32 w-34 cursor-pointer "
                   />
                 </div>
               ))}
