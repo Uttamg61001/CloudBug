@@ -58,7 +58,11 @@ const SelectCloud = () => {
                 <div key={item.name} className="flex items-center p-4 justify-center  bg-[#EEF7FE]  rounded-[20px] shadow-md"
                   onClick={() => handleClick(item)}
                 >
-                  <img src={item.image} alt="AWS Logo" className="object-contain cursor-pointer" />
+                  <img
+                    src={item.image}
+                    alt= {`${item.image} logo`}
+                    className="object-contain h-20  cursor-pointer "
+                  />
                 </div>
               ))}
             </div>
