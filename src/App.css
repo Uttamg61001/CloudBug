@@ -1,0 +1,51 @@
+.logoBg{
+  background-image: url('./assets/images/Dashboard-Cloud.svg');
+  background-repeat: no-repeat;
+  background-size: cover ;
+  /* height: 100vh; */
+}
+/* Autofill styles for Webkit-based browsers (Chrome, Safari) */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset; /* Change 'white' to the desired background color */
+    -webkit-text-fill-color: #000 !important; /* Ensure text color is as desired */
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Autofill styles for Mozilla Firefox */
+input:-moz-autofill,
+textarea:-moz-autofill,
+select:-moz-autofill {
+    box-shadow: 0 0 0px 1000px white inset; /* Change 'white' to the desired background color */
+    -moz-text-fill-color: #000 !important; /* Ensure text color is as desired */
+    background-color: transparent !important;
+}
+
+
+/* this is for textfiled fucus */
+/* .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color:#7360DF !important;
+
+
+}
+.css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{
+  border-color:#7360DF !important;
+
+
+} */
+.css-fvipm8.Mui-focused .MuiOutlinedInput-notchedOutline{
+  border-color: #bc35e5 !important;
+  border-width:1px !important
+
+}
+
+.Mui-focused {
+  border-color: #eb4ba3 !important
+}
+
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+  color:#7360DF !important;
+
+
+}
