@@ -52,10 +52,10 @@ const SelectCloud = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-4 md:p-0">
               {cloud.map((item, index) => (
                 
-                <div key={item.name} className="flex items-center p-4 justify-center  bg-[#EEF7FE]  rounded-[20px] shadow-md"
+                <div key={item.name} className="flex items-center p-14 md:p-4 justify-center  bg-[#EEF7FE]  rounded-[20px] shadow-md"
                   onClick={() => handleClick(item)}
                 >
-                  <img src={item.image} alt="AWS Logo" className="object-contain cursor-pointer" />
+                  <img  src={item.image} alt="AWS Logo" className="object-cover cursor-pointer " />
                 </div>
               ))}
             </div>
