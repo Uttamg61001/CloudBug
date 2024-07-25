@@ -54,14 +54,15 @@ const SelectCloud = () => {
             </h1>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-10 md:p-5">
               {cloud.map((item, index) => (
-                
-                <div key={item.name} className="flex items-center p-4 justify-center  bg-[#EEF7FE]  rounded-[20px] shadow-md"
+                <div
+                  key={item.name}
+                  className="flex items-center p-4  justify-center  bg-[#EEF7FE]  rounded-[20px] shadow-md  transition ease-in-out duration-300  hover:scale-105 "
                   onClick={() => handleClick(item)}
                 >
                   <img
                     src={item.image}
                     alt= {`${item.image} logo`}
-                    className="object-contain h-20 w-28 cursor-pointer "
+                    className="object-contain h-20  cursor-pointer "
                   />
                 </div>
               ))}
