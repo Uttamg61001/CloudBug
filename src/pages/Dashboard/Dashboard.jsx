@@ -19,6 +19,7 @@ import ServiceBarGraph from './ServiceBarGraph';
 import TotalCloud from './TotalClouds';
 import SubscriptionCard from './SubscriptionCard';
 import Sidebar from '../../components/Sidebar';
+import useWIndowWidth from "../../hooks/useWIndowWidth"
 
 const navItems = [
     { name: 'Dashboard', icon: images.Dashboard, link: '/' },
@@ -112,6 +113,7 @@ const FaAngleDoubleRightIcon = styled(FaAngleDoubleRight, { shouldForwardProp: (
 );
 
 export default function MiniDrawer() {
+    const width = useWIndowWidth();
     const theme = useTheme();
     const [open, setOpen] = React.useState(true);
 
@@ -177,11 +179,11 @@ export default function MiniDrawer() {
             <Sidebar />
             <Box component="main" sx={{ flexGrow: 1, }} className='logoBg pt-10 p-5' >
                 <DrawerHeader />
-               <div className="grid grid-cols-3 justify-items-center place-items-cente">
-               <div className="graph-wrapper h-96 w-96">
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  justify-items-center gap-4">
+               <div className="graph-wrapper h-96 ">
                     <ServiceBarGraph />
                 </div>
-                <div className="">
+                <div className=" ">
                     <TotalCloud />
                 </div>
                 <div className="">

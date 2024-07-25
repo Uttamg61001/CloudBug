@@ -13,7 +13,7 @@ let clouds = [
 
 const TotalCloud = () => {
     return (
-        <div className='bg-white border rounded-lg w-[400px] shadow-lg p-2'>
+        <div className='bg-white border rounded-lg  shadow-lg p-2'>
             <div className='flex justify-between items-center '>
                 <p className=" font-semibold">Total Clouds</p>
                 <div className='w-[30px] h-[30px] rounded-full flex justify-center  items-center shadow-md'><MdOutlineRemoveRedEye /></div>
