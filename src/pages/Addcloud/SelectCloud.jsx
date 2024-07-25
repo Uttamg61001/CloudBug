@@ -48,7 +48,7 @@ const SelectCloud = () => {
         </div>
         {/* <SelectCloudHeader /> */}
         <main className=" flex items-center justify-evenly h-[100vh] ">
-          <div className="flex flex-col sm:gap-6  items-center mt-12 sm:mt-0 h-screen justify-center  z-20">
+          <div className="flex flex-col sm:gap-10  items-center mt-12 sm:mt-0 h-screen justify-center  z-20">
             <h1 className="text-2xl font-medium sm:text-3xl  text-zinc-900 ">
               Select Your Cloud
             </h1>
