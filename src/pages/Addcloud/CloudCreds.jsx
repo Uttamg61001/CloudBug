@@ -33,22 +33,23 @@ const CloudCreds = () => {
   return (
     <Box sx={{ display: "flex" }}>
       <div className="hidden sm:block">
+        <Sidebar />
+      </div>
 
-      <Sidebar />
-      </div>
-      
-      <div className={` h-[100vh] w-full  ${width > 768 ? "logoBg" : "" } relative`}>
-      <div className=" h-full w-full absolute top-[-70px] left-0 z-[-1]  block md:hidden">
-        <img
-          src={images.mobileBg}
-          className="h-full w-full object-cover object-left-top"
-          alt="Background Image"
-        />
-      </div>
+      <div
+        className={` h-[100vh] w-full  ${width > 768 ? "logoBg" : ""} relative`}
+      >
+        <div className=" h-full w-full absolute top-[-70px] left-0 z-[-1]  block md:hidden">
+          <img
+            src={images.mobileBg}
+            className="h-full w-full object-cover object-left-top"
+            alt="Background Image"
+          />
+        </div>
         {/* <SelectCloudHeader /> */}
         <main className=" flex items-center justify-evenly h-full">
           <div className="flex flex-col items-center gap-10 mt-36 justify-center w-full ">
-            <h1 className="text-2xl sm:text-4xl font-medium text-zinc-900 ">
+            <h1 className="text-2xl sm:text-3xl font-medium text-zinc-900 ">
               Cloud Credentials
             </h1>
             {/* <div className="shadow-lg bg-white rounded-xl p-4  w-11/12 sm:w-3/4 md:w-2/5 lg:w-1/2"> */}
@@ -60,10 +61,9 @@ const CloudCreds = () => {
                       <Step
                         key={label}
                         sx={{
-                          "&.Mui-active .MuiStepLabel-label": { color: "#fff"},
+                          "&.Mui-active .MuiStepLabel-label": { color: "#fff" },
                           "&.Mui-completed .MuiStepLabel-label": {
                             color: "#fff",
-                            
                           },
                           "& .MuiStepConnector-root.Mui-active, & .MuiStepConnector-root.Mui-completed":
                             {
@@ -98,7 +98,7 @@ const CloudCreds = () => {
                   id="size-small-filled"
                   size="small"
                   options={ApiKeys}
-                  sx={{ width: "100%"}}
+                  sx={{ width: "100%" }}
                   value={""}
                   defaultValue={""}
                   selectOnFocus
