@@ -17,9 +17,11 @@ import {
 import { useNavigate, useParams } from "react-router-dom";
 import SelectCloudHeader from "../Addcloud/SelectCloudHeader";
 import Sidebar from "../../components/Sidebar";
+import useWindowWidth from "../../hooks/useWIndowWidth";
 
 const ApiKeys = ["IHL", "Skej", "Lumina"];
 const SelectService = () => {
+  const width = useWindowWidth();
   const [activeStep, setActiveStep] = useState();
   const [apiKey, setApiKey] = useState(null);
   const { cloud } = useParams();
@@ -30,8 +32,18 @@ const SelectService = () => {
 
   return (
     <Box sx={{ display: "flex" }}>
+      <div className="hidden sm:block">
       <Sidebar />
-      <div className="min-h-screen w-full logoBg relative">
+
+      </div>
+      <div className={` h-screen w-full  ${width > 768 ? "logoBg" : ""} relative`}>
+      <div className=" h-full w-full absolute top-[-90px] left-0 z-[-1]  block md:hidden">
+          <img
+            src={images.mobileBg}
+            className="h-full w-full object-cover object-left-top "
+            alt="Background Image"
+          />
+        </div>
         {/* <SelectCloudHeader /> */}
         <main className=" flex items-center justify-center h-full w-full">
           <div className="flex flex-col items-center gap-20 h-screen justify-center w-full ">

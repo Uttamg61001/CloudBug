@@ -176,8 +176,12 @@ export default function MiniDrawer() {
                     }
                 </div>
             </Drawer> */}
+
+            <div className='hidden sm:block'>
+
             <Sidebar />
-            <Box component="main" sx={{ flexGrow: 1, }} className='logoBg pt-10 p-5' >
+            </div>
+            <Box component="main" sx={{ flexGrow: 1, }} className='logoBg pt-10 p-5 h-[100vh]' >
                 <DrawerHeader />
                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  justify-items-center gap-4">
                <div className="graph-wrapper h-96 ">
