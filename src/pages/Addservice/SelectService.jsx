@@ -46,8 +46,8 @@ const SelectService = () => {
         </div>
         {/* <SelectCloudHeader /> */}
         <main className=" flex items-center justify-center h-full w-full">
-          <div className="flex flex-col items-center gap-20 h-screen justify-center w-full ">
-            <h1 className="text-4xl font-[400] text-zinc-900 ">
+          <div className="flex flex-col items-center gap-20 mt-12 sm:mt-10 h-screen justify-center w-full ">
+            <h1 className="text-2xl font-medium sm:text-3xl  text-zinc-900 ">
               Select Service
             </h1>
             <div className="shadow-lg bg-white rounded-xl px-8 md:px-20 py-10  w-11/12 sm:w-3/4 md:w-3/4 lg:w-1/2 flex flex-col justify-between gap-10">

@@ -141,7 +141,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="relative h-full border-none shadow-lg">
+    <div className="relative h-full border-none shadow-lg ">
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <div className="px-6 py-4 flex justify-between">
@@ -159,7 +159,7 @@ const Sidebar = () => {
           </div>
         </div>
       </AppBar>
-      <Drawer variant="permanent" open={open} className="relative">
+      <Drawer variant="permanent" open={open} className="relative hidden sm:block">
         <DrawerHeader className="my-4">
           {open ? (
             <img src={images.logo} alt="" className="h-10 w-52 my-8" />
