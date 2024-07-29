@@ -79,11 +79,11 @@ const Login = () => {
           />
         </div>
       </section>
-      <section className="max-w-[400px]  m-auto px-5  mt-20 sm:mt-0 sm:px-10">
+      <section className="max-w-[400px] m-3 sm:m-auto px-5  mt-20 sm:mt-0 sm:px-10">
         <div className="hidden sm:grid justify-center  md:mt-6 lg:mt-10">
           <img src={images.logo} alt="Logo" className="w-44 " />
         </div>
-        <div className="flex sm:hidden  w-24 ">
+        <div className="flex sm:hidden  w-28 ">
           <img src={images.imageuploadfloat} alt="Logo" className="h-full w-full" />
         </div>
         <form autoComplete="off" onSubmit={handleSubmit} className="w-full flex flex-col gap-4 ">

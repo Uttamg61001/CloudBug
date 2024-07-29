@@ -69,7 +69,7 @@ const SelectCloud = () => {
             </div>
           </div>
         </main>
-        <div className=" md:inline-block absolute top-20 left-8  lg:left-40  z-10 w-24 sm:w-26">
+        <div className=" md:inline-block absolute top-14 sm:top-20 left-8  lg:left-40  z-10 w-24 sm:w-36">
           <img src={images.imageuploadfloat} alt="" />
         </div>
       </div>

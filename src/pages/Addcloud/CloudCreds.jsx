@@ -45,6 +45,7 @@ const CloudCreds = () => {
             className="h-full w-full object-cover object-left-top"
             alt="Background Image"
           />
+          
         </div>
         {/* <SelectCloudHeader /> */}
         <main className=" flex items-center justify-evenly h-full">
@@ -53,7 +54,7 @@ const CloudCreds = () => {
               Cloud Credentials
             </h1>
             {/* <div className="shadow-lg bg-white rounded-xl p-4  w-11/12 sm:w-3/4 md:w-2/5 lg:w-1/2"> */}
-            <div className="shadow-md bg-white rounded-xl px-4 lg:px-8 w-[90%] md:w-[35%] lg:w-[45%] ">
+            <div className="shadow-sm sm:shadow-md bg-white rounded-xl px-4 lg:px-8 w-[90%] md:w-[35%] lg:w-[45%] ">
               <div className="mt-4 mb-10 px-8">
                 <Stepper activeStep={0}>
                   {[1, 2, 3].map((label, index) => {
@@ -159,6 +160,7 @@ const CloudCreds = () => {
                     color: "#51459E",
                     backgroundColor: "#EAE6FF",
                     fontWeight: "bold",
+                    boxShadow: "none",
                     letterSpacing: "2px",
                     "&:hover": {
                       backgroundColor: "#33186B",
@@ -178,9 +180,10 @@ const CloudCreds = () => {
             </div>
           </div>
         </main>
-        <div className=" md:inline-block absolute top-20 left-8 w-20   sm:left-36 z-10">
+        <div className=" md:inline-block absolute top-20 w-20 left-8 sm:w-36   sm:left-36 z-10">
           <img src={images[cloud]} alt="" />
         </div>
+        
       </div>
     </Box>
   );

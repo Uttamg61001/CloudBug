@@ -50,7 +50,7 @@ const SelectService = () => {
             <h1 className="text-2xl font-medium sm:text-3xl  text-zinc-900 ">
               Select Service
             </h1>
-            <div className="shadow-lg bg-white rounded-xl px-8 md:px-20 py-10  w-11/12 sm:w-3/4 md:w-3/4 lg:w-1/2 flex flex-col justify-between gap-10">
+            <div className="shadow-sm sm:shadow-md bg-white rounded-xl px-8 md:px-20 py-10  w-11/12 sm:w-3/4 md:w-3/4 lg:w-1/2 flex flex-col justify-between gap-10">
               <div className="mt-4 mb-10 md:px-8">
                 <Stepper activeStep={1}>
                   {[1, 2, 3].map((label, index) => {
@@ -107,8 +107,8 @@ const SelectService = () => {
                     </li>
                   )}
                 />
-                <div className="mb-4 mt-4 flex justify-end items-center">
-                  {/* <Button variant="outlined" sx={{
+                <div className="mb-4 mt-4 flex justify-between items-center">
+                  <Button variant="outlined" sx={{
                                 color: "#33186B", borderColor: '#33186B', outlineColor: "#33186B",
                                 '&:hover': {
                                     backgroundColor: '#33186B',
@@ -119,8 +119,8 @@ const SelectService = () => {
                                 },
 
                             }}>
-                                Clear
-                            </Button> */}
+                                Back
+                            </Button>
                   <Button
                     variant="contained"
                     sx={{
@@ -128,7 +128,7 @@ const SelectService = () => {
                         backgroundColor: "#EAE6FF",
                         fontWeight: "bold",
                         letterSpacing: "2px",
-                        boxShadow: "2",
+                        boxShadow: "none",
                       "&:hover": {
                         backgroundColor: "#33186B",
                         color: "white",
@@ -149,7 +149,8 @@ const SelectService = () => {
           </div>
         </main>
         <div className="hidden md:inline-block absolute top-48 left-20 z-10">
-          <img src={images[cloud]} alt="" />
+          {/* <img src={images[cloud]} alt="" />  */}
+        
         </div>
       </div>
     </Box>

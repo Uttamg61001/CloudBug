@@ -77,7 +77,7 @@ const SignUp = () => {
         <div className="hidden sm:grid justify-center mt-10">
           <img src={images.logo} alt="Logo" className="w-44 " />
         </div>
-        <div className="flex sm:hidden  w-24">
+        <div className="flex sm:hidden  w-28">
           <img src={images.imageuploadfloat} alt="Logo" className="h-full w-full" />
         </div>
         <form autoComplete="off" onSubmit={handleSubmit} className="flex flex-col gap-4" >

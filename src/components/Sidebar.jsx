@@ -14,6 +14,8 @@ import images from "../assets/images/imagesExport";
 import { useDispatch, useSelector } from "react-redux";
 import { setOpen } from "../redux/slices/drawerSlice";
 import { IoMdAdd } from "react-icons/io";
+import { MdDashboard } from "react-icons/md";
+
 
 const navItems = [
   { name: "Dashboard", icon: images.Dashboard, link: "/" },
@@ -25,7 +27,7 @@ const navItems = [
   { name: "Alert", icon: images.Alert, link: "/alert" },
 ];
 
-const drawerWidth = 280;
+const drawerWidth = 250;
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -146,14 +148,14 @@ const Sidebar = () => {
       <AppBar position="fixed" open={open}>
         <div className="px-6 py-4 flex justify-between">
           <div className={open ? "text-black" : "text-black ml-12"}>
-            <h6 className="text-2xl font-semibold">Welcome, John</h6>
-            <p className="text-xs">Here is your NeuraBug Report</p>
+            <h6 className="text-2xl hidden sm:block font-semibold">Welcome, John</h6>
+            <p className="text-xs hidden sm:block">Here is your NeuraBug Report</p>
           </div>
           <div className="flex justify-between items-center gap-6">
             <FaBell size={25} color="#5041BC" />
             <div className="flex justify-center items-center text-black gap-4">
               <Avatar sx={{ bgcolor: "#51459E" }}>J</Avatar>
-              <span>John Doe</span>
+              <span className="hidden sm:block0.0">John Doe</span>
               <FaCaretDown color="#51459E" />
             </div>
           </div>
@@ -162,16 +164,16 @@ const Sidebar = () => {
       <Drawer variant="permanent" open={open} className="relative hidden sm:block">
         <DrawerHeader className="my-4">
           {open ? (
-            <img src={images.logo} alt="" className="h-10 w-52 my-8" />
+            <img src={images.logo} alt="" className="h-8 w-40 my-4" />
           ) : (
             <img src={images.smalllogo} alt="" className="h-10 w-52 my-8" />
           )}
         </DrawerHeader>
         {open ? (
-          <div className="addservicebtn flex justify-center my-8">
+          <div className="addservicebtn flex justify-center my-2">
             <Link
               to="/select-service"
-              className="bg-[#51459E] text-white px-14 py-3 rounded-xl"
+              className="bg-[#51459E] text-white px-14 py-2 rounded-xl"
             >
               Add Service
             </Link>
@@ -180,7 +182,7 @@ const Sidebar = () => {
           <div className="addservicebtn flex justify-center my-8">
             <Link
               to="/select-service"
-              className="bg-[#51459E] text-white px-3 py-3 rounded-md shadow-lg"
+              className="bg-[#51459E] text-white p-2 rounded-md shadow-lg"
             >
               <IoMdAdd size={25} />
             </Link>
@@ -208,7 +210,7 @@ const Sidebar = () => {
             ))}
           </div>
         ) : (
-          <div className="navlist mt-4 flex flex-col justify-center">
+          <div className="navlist mt-4 flex flex-col justify-center px-2">
             {navItems?.map((item, index) => (
               <Link
                 to={item.link}
@@ -216,7 +218,7 @@ const Sidebar = () => {
                 className="flex flex-col justify-between gap-2 items-center my-2"
               >
                 <div
-                  className={`navitem flex items-center justify-center p-4 ${
+                  className={`navitem flex items-center justify-center p-2 ${
                     window.location.pathname == item.link
                       ? "bg-[#51459E]"
                       : "bg-[#ECEFF7] "
@@ -233,13 +235,13 @@ const Sidebar = () => {
         <FaAngleDoubleLeftIcon
           onClick={handleDrawerClose}
           size={35}
-          className={`absolute -right-3 top-28 p-2 shadow-lg cursor-pointer rounded-full bg-slate-200`}
+          className={`absolute -right-3 top-16 p-2 shadow-lg cursor-pointer rounded-full bg-slate-200`}
         />
       ) : (
         <FaAngleDoubleRightIcon
           onClick={handleDrawerOpen}
           size={35}
-          className={`absolute -right-3 top-28 p-2 shadow-lg cursor-pointer rounded-full bg-slate-200`}
+          className={`absolute -right-3 top-24   p-2 shadow-lg cursor-pointer rounded-full bg-slate-200`}
         />
       )}
     </div>
